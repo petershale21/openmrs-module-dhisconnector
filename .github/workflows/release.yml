@@ -42,7 +42,7 @@ jobs:
     - name: Build OpenMRS module
       run: |
         source "$HOME/.sdkman/bin/sdkman-init.sh"
-        mvn clean install -DskipTests
+        mvn clean install -Dmaven.test.skip=true
 
     # -------------------------------
     # Upload artifacts to release repo
